@@ -1,0 +1,104 @@
+<html></html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            background: linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d);
+            padding: 10px 20px;
+        }
+        .navbar .logo {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+        .navbar .logo img {
+            height: 30px;
+            margin-right: 10px;
+        }
+        .navbar .logo span {
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .navbar .menu {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+        }
+        .navbar .menu a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 14px;
+        }
+        .navbar .menu .new {
+            background-color: #f0c040;
+            color: black;
+            padding: 2px 5px;
+            border-radius: 5px;
+            font-size: 12px;
+            margin-left: 5px;
+        }
+        .navbar .menu .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .navbar .menu .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .navbar .menu .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .navbar .menu .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .navbar .menu .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .navbar .signup {
+            background-color: #007bff;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="data:image/png;base64,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" alt="Company Logo">
+        </div>
+        <div class="menu">
+            <a href="#">Data Science & AI</a>
+            <a href="#">B. Tech in CS & AI</a>
+            <a href="#">Newton Edge</a>
+            <a href="#">Refer & Earn</a>
+            <div class="dropdown">
+                <a href="#">More <i class="fas fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="#">Option 1</a>
+                    <a href="#">Option 2</a>
+                    <a href="#">Option 3</a>
+                </div>
+            </div>
+            <a class="new" href="#">NEW</a>
+        </div>
+        <a class="signup" href="#">Sign up</a>
+    </div>
+</body>
+</html>
